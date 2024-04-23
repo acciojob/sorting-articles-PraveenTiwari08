@@ -9,6 +9,7 @@ const bands = ['The Plot in You',
 			   'Oh, Sleeper', 'A Skylit Drive', 
 			   'Anywhere But Here', 'An Old Dog'];
 
+bands.sort();
 // bands.forEach(item => {
 //   listHTML = `<li>${item}</li>`;
 // });
@@ -17,5 +18,4 @@ let listitems = "";
 for(let item of bands){
 	listitems += `<li>${item}</li>`;
 }
-
 list.innerHTML = listitems;
