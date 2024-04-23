@@ -9,11 +9,13 @@ const bands = ['The Plot in You',
 			   'Oh, Sleeper', 'A Skylit Drive', 
 			   'Anywhere But Here', 'An Old Dog'];
 
+// bands.forEach(item => {
+//   listHTML = `<li>${item}</li>`;
+// });
+// list.innerHTML = listHTML;
+let listitems = "";
+for(let item of bands){
+	listitems += `<li>${item}</li>`;
+}
 
-let listHTML = "<ul>";
-listItems.forEach(item => {
-  listHTML += `<li>${item}</li>`;
-});
-listHTML += "</ul>";
-
-list.innerHTML = listHTML;
+list.innerHTML = listitems;
