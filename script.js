@@ -9,11 +9,22 @@ const bands = ['The Plot in You',
 			   'Oh, Sleeper', 'A Skylit Drive', 
 			   'Anywhere But Here', 'An Old Dog'];
 
-bands.sort();
-// bands.forEach(item => {
-//   listHTML = `<li>${item}</li>`;
-// });
-// list.innerHTML = listHTML;
+function stripArticle(bandName) {
+    return bandName.replace(/^(a |an |the )/i, '').trim();
+}
+
+bands.sort((a, b) => {
+    const bandA = stripArticle(a);
+    const bandB = stripArticle(b);
+    if (bandA < bandB) {
+        return -1;
+    }
+    if (bandA > bandB) {
+        return 1;
+    }
+    return 0;
+});
+
 let listitems = "";
 for(let item of bands){
 	listitems += `<li>${item}</li>`;
