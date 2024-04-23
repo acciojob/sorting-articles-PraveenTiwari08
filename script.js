@@ -1,5 +1,5 @@
 //your JS code here. If required.
-let list = document.getElementById("band");
+let list = document.getElementById("bands");
 const bands = ['The Plot in You', 
 			   'The Devil Wears Prada', 
 			   'Pierce the Veil', 
